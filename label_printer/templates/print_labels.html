@@ -1,0 +1,20 @@
+{% extends 'base_generic.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<section class="clean-block dark">
+
+<div class="container">
+<p></p>
+<p></p>
+<form method="post">
+    <div id="forms">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input id="submit" class="btn btn-primary" type="submit" />
+    </div>
+</form>
+</div>
+</section>
+{% endblock %}
